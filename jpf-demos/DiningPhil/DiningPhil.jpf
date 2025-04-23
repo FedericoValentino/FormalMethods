@@ -1,0 +1,4 @@
+target = DiningPhil
+classpath=.
+search.class = .search.heuristic.BFSHeuristic
+listener=gov.nasa.jpf.listener.StateSpaceDot
