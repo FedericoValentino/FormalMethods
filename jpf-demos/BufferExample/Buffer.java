@@ -13,7 +13,6 @@ class Buffer implements BufferInterface {
 
     public void put(Object x) {
         synchronized (lockPut) {
-            Thread.yield(); // increase chance of deadlock
             synchronized (lockGet) {
                 while (usedSlots == SIZE) {
                     try {
@@ -32,7 +31,6 @@ class Buffer implements BufferInterface {
 
     public Object get() throws HaltException {
         synchronized (lockGet) {
-            Thread.yield(); // increase chance of deadlock
             synchronized (lockPut) {
                 while (usedSlots == 0 && !halted) {
                     try {

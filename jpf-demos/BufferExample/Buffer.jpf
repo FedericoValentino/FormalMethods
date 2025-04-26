@@ -1,7 +1,7 @@
 target=Main
 classpath=/home/feder34/git/FormalMethods/jpf-demos/BufferExample
 
-search.class = .search.heuristic.BFSHeuristic
+search.class = .search.heuristic.DFSHeuristic
 listener=gov.nasa.jpf.listener.PreciseRaceDetector,gov.nasa.jpf.listener.StateSpaceDot
 
 report.console.property_violation=error,trace
