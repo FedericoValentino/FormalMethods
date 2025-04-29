@@ -1,3 +1,4 @@
 target=Choice
+classpath=.
 
 cg.enumerate_random=true

@@ -1,4 +1,10 @@
 target=Randomize
 classpath=.
-cg.enumerate_random=true
+
+
+
+
 listener=gov.nasa.jpf.listener.StateSpaceDot
+
+cg.enumerate_random=true
+cg.boolean.false_first=false

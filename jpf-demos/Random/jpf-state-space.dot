@@ -1,0 +1,14 @@
+digraph jpf_state_space {
+/* searchAdvanced(0, Thd0:java/util/Random.java:-1, true) */
+/* searchAdvanced(1, Thd0:Randomize.java:3, false) */
+  st0 -> tr0;
+  tr0 [label="Thd0:Randomize.java:3",shape=box]
+  tr0 -> st1;  st0 [label="0",shape=circle,color=black];
+  st1 [label="1",shape=egg,color=green];
+/* searchBacktracked(gov.nasa.jpf.listener.StateSpaceDot$StateInformation@682b2fa) */
+/* searchAdvanced(1, Thd0:Randomize.java:3, false) */
+  st0 -> tr1;
+  tr1 [label="Thd0:Randomize.java:3",shape=box]
+  tr1 -> st1;/* searchBacktracked(gov.nasa.jpf.listener.StateSpaceDot$StateInformation@682b2fa) */
+/* searchBacktracked(gov.nasa.jpf.listener.StateSpaceDot$StateInformation@682b2fa) */
+}

@@ -1,0 +1,9 @@
+cg.enumerate_random=true   : generate all possible states
+
+cg.boolean.false_first=false
+
+cg.randomize_choices=VAR_SEED/FIXED_SEED  : randomize choice generation order  
+	->cg.seed=33
+
+
+to build with verifyAPI link to "jpf-core/build/main"
