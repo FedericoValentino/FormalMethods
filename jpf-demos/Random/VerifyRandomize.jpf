@@ -1,2 +1,5 @@
 target=VerifyRandomize
 classpath=.
+
+listener=gov.nasa.jpf.listener.StateSpaceDot
+cg.boolean.false_first=false

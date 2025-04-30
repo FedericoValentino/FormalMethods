@@ -1,14 +1,31 @@
 digraph jpf_state_space {
-/* searchAdvanced(0, Thd0:java/util/Random.java:-1, true) */
-/* searchAdvanced(1, Thd0:Randomize.java:3, false) */
+/* searchAdvanced(0, Thd0:gov/nasa/jpf/vm/Verify.java:-1, true) */
+/* searchAdvanced(1, Thd0:gov/nasa/jpf/vm/Verify.java:-1, true) */
   st0 -> tr0;
-  tr0 [label="Thd0:Randomize.java:3",shape=box]
+  tr0 [label="Thd0:gov/nasa/jpf/vm/Verify.java:-1",shape=box]
   tr0 -> st1;  st0 [label="0",shape=circle,color=black];
-  st1 [label="1",shape=egg,color=green];
-/* searchBacktracked(gov.nasa.jpf.listener.StateSpaceDot$StateInformation@682b2fa) */
-/* searchAdvanced(1, Thd0:Randomize.java:3, false) */
-  st0 -> tr1;
-  tr1 [label="Thd0:Randomize.java:3",shape=box]
-  tr1 -> st1;/* searchBacktracked(gov.nasa.jpf.listener.StateSpaceDot$StateInformation@682b2fa) */
-/* searchBacktracked(gov.nasa.jpf.listener.StateSpaceDot$StateInformation@682b2fa) */
+/* searchAdvanced(2, Thd0:VerifyRandomize.java:3, false) */
+  st1 -> tr1;
+  tr1 [label="Thd0:VerifyRandomize.java:3",shape=box]
+  tr1 -> st2;  st1 [label="1",shape=circle,color=black];
+  st2 [label="2",shape=egg,color=green];
+/* searchBacktracked(gov.nasa.jpf.listener.StateSpaceDot$StateInformation@510f3d34) */
+/* searchAdvanced(2, Thd0:VerifyRandomize.java:3, false) */
+  st1 -> tr2;
+  tr2 [label="Thd0:VerifyRandomize.java:3",shape=box]
+  tr2 -> st2;/* searchBacktracked(gov.nasa.jpf.listener.StateSpaceDot$StateInformation@510f3d34) */
+/* searchBacktracked(gov.nasa.jpf.listener.StateSpaceDot$StateInformation@510f3d34) */
+/* searchAdvanced(3, Thd0:gov/nasa/jpf/vm/Verify.java:-1, true) */
+  st0 -> tr3;
+  tr3 [label="Thd0:gov/nasa/jpf/vm/Verify.java:-1",shape=box]
+  tr3 -> st3;/* searchAdvanced(2, Thd0:VerifyRandomize.java:3, false) */
+  st3 -> tr4;
+  tr4 [label="Thd0:VerifyRandomize.java:3",shape=box]
+  tr4 -> st2;  st3 [label="3",shape=circle,color=black];
+/* searchBacktracked(gov.nasa.jpf.listener.StateSpaceDot$StateInformation@510f3d34) */
+/* searchAdvanced(4, Thd0:VerifyRandomize.java:3, false) */
+  st3 -> tr5;
+  tr5 [label="Thd0:VerifyRandomize.java:3",shape=box]
+  tr5 -> st4;/* propertyViolated(4) */
+  st4 [label="4:gov.nasa.jpf.vm.NoUncaughtExceptionsProperty",shape=diamond,color=red];
 }
