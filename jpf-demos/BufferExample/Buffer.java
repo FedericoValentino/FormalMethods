@@ -85,7 +85,6 @@ class Consumer extends Thread {
             }
         } catch (HaltException e) {}
 
-        // Optional asserts (good if you want to catch wrong behavior)
         assert count == 6 : "Expected 6 items, got " + count;
         for (int i = 0; i < count; i++) {
             assert received[i].attr == i : "Attribute mismatch at index " + i;
@@ -105,7 +104,7 @@ class Producer extends Thread {
         for (int i = 0; i < 6; i++) {
             AttrData ad = new AttrData(i, i * i);
             buffer.put(ad);
-            yield(); // give Consumer chance
+            yield();
         }
         buffer.halt();
     }

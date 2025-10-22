@@ -2,3 +2,4 @@ target=Choice
 classpath=.
 
 cg.enumerate_random=true
+cg.randomize_choices=VAR_SEED
